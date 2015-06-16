@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fiZ-u8-Peu" kind="relationship" relationship="viewControllers" id="IVN-Nq-PU8"/>
+                        <segue destination="zG8-Aj-P3W" kind="relationship" relationship="viewControllers" id="Tag-hH-AcR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Single View-->
+        <scene sceneID="nIv-JC-3Qk">
+            <objects>
+                <viewController id="zG8-Aj-P3W" customClass="ALSingleAdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="58p-o5-GOU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mhb-yc-gkt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oyh-1Z-eqi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBv-vw-e5T" customClass="ALCarouselCardView">
+                                <rect key="frame" x="32" y="150" width="536" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="7mu-GE-d4Y"/>
+                                    <constraint firstAttribute="height" constant="350" id="PRX-ne-pQ6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7mu-GE-d4Y"/>
+                                        <exclude reference="PRX-ne-pQ6"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.97415865384615385" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OBv-vw-e5T" firstAttribute="leading" secondItem="Oyh-1Z-eqi" secondAttribute="leadingMargin" constant="16" id="5ee-oG-ISK"/>
+                            <constraint firstAttribute="centerY" secondItem="OBv-vw-e5T" secondAttribute="centerY" constant="25" id="IXw-TT-MrX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OBv-vw-e5T" secondAttribute="trailing" constant="16" id="bLW-gM-Mqq"/>
+                            <constraint firstAttribute="bottom" secondItem="OBv-vw-e5T" secondAttribute="bottom" constant="150" id="lEG-dn-qQT"/>
+                            <constraint firstItem="OBv-vw-e5T" firstAttribute="top" secondItem="Oyh-1Z-eqi" secondAttribute="top" constant="150" id="vsx-bH-KQo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IXw-TT-MrX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Single View" id="viv-iH-omn"/>
+                    <connections>
+                        <outlet property="cardView" destination="OBv-vw-e5T" id="yl7-Uz-hZc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQi-qm-yJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="-372"/>
+        </scene>
+        <!--Carousels-->
+        <scene sceneID="MYg-4J-00W">
+            <objects>
+                <viewController id="fiZ-u8-Peu" customClass="ALCarouselViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="waX-Pt-JOA"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZ7-ql-JZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lqk-bM-X1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9A6-EF-NwL" customClass="ALCarouselView">
+                                <rect key="frame" x="0.0" y="100" width="600" height="350"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="UYx-eN-azr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.96839488636363646" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="9A6-EF-NwL" secondAttribute="centerY" id="IfL-W7-XIa"/>
+                            <constraint firstAttribute="trailing" secondItem="9A6-EF-NwL" secondAttribute="trailing" id="LHT-bq-fvl"/>
+                            <constraint firstItem="9A6-EF-NwL" firstAttribute="leading" secondItem="lqk-bM-X1Z" secondAttribute="leading" id="gj9-jI-G9f"/>
+                            <constraint firstAttribute="centerY" secondItem="9A6-EF-NwL" secondAttribute="centerY" constant="25" id="haN-uc-LBj"/>
+                            <constraint firstItem="9A6-EF-NwL" firstAttribute="top" secondItem="lqk-bM-X1Z" secondAttribute="top" id="vLG-qg-w9t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IfL-W7-XIa"/>
+                                <exclude reference="vLG-qg-w9t"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Carousels" id="yhy-Qx-A0g"/>
+                    <connections>
+                        <outlet property="carouselView" destination="9A6-EF-NwL" id="CsB-yy-UHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IS-LT-jNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="352"/>
+        </scene>
+    </scenes>
+</document>
